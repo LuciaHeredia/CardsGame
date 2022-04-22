@@ -40,6 +40,9 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                     <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="StartGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WpL-ri-Y4k"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qth-se-8aT" userLabel="Cards">
                                 <rect key="frame" x="20" y="386" width="374" height="289"/>
@@ -192,6 +195,14 @@
                             <constraint firstItem="VuE-OC-ncL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zIL-RZ-pMU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameNumberLabel" destination="Ojc-LF-5o6" id="WNe-Eg-FkQ"/>
+                        <outlet property="player1ImageView" destination="5d7-8H-JwO" id="mgI-5x-MbO"/>
+                        <outlet property="player1ScoreLabel" destination="AeA-Xn-Z1F" id="T6H-1r-agj"/>
+                        <outlet property="player2ImageView" destination="8uA-wl-Ynj" id="YRi-wZ-YnG"/>
+                        <outlet property="player2ScoreLabel" destination="0VH-GF-zoA" id="giF-rW-3M2"/>
+                        <outlet property="timerLabel" destination="Fba-iU-COr" id="Qh3-FN-Ny8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
