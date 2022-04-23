@@ -30,20 +30,71 @@
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvw-w2-piQ" userLabel="Start button">
-                                <rect key="frame" x="82" y="299" width="250" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="qV1-VH-U7v"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Start Game">
-                                    <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="StartGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WpL-ri-Y4k"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Uu-GK-f7V" userLabel="information">
+                                <rect key="frame" x="82" y="165" width="250" height="92"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNr-uK-Eok">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="42"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fba-iU-COr" userLabel="Timer label">
+                                                <rect key="frame" x="154" y="9.5" width="42" height="32.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="EDF-FN-xmX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vX-uZ-bNL">
+                                                <rect key="frame" x="60" y="0.0" width="70" height="42"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Fba-iU-COr" firstAttribute="top" secondItem="aNr-uK-Eok" secondAttribute="top" constant="9.5" id="K5Q-e9-Z5i"/>
+                                            <constraint firstItem="8vX-uZ-bNL" firstAttribute="top" secondItem="aNr-uK-Eok" secondAttribute="top" id="Ot3-V0-EuH"/>
+                                            <constraint firstAttribute="bottom" secondItem="Fba-iU-COr" secondAttribute="bottom" id="Qqa-RU-blW"/>
+                                            <constraint firstAttribute="bottom" secondItem="Fba-iU-COr" secondAttribute="bottom" id="YNZ-Hb-2Ad"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fba-iU-COr" secondAttribute="trailing" constant="54" id="Yka-Sm-W2f"/>
+                                            <constraint firstAttribute="height" constant="42" id="cSU-ch-Izx"/>
+                                            <constraint firstItem="Fba-iU-COr" firstAttribute="leading" secondItem="8vX-uZ-bNL" secondAttribute="trailing" constant="24" id="d17-5C-I2C"/>
+                                            <constraint firstAttribute="bottom" secondItem="8vX-uZ-bNL" secondAttribute="bottom" id="jgz-WU-kru"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6B0-oi-i1f">
+                                        <rect key="frame" x="0.0" y="50" width="250" height="42"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Game No.:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44n-HH-o8n">
+                                                <rect key="frame" x="0.0" y="0.0" width="129.5" height="33"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojc-LF-5o6" userLabel="Game number label">
+                                                <rect key="frame" x="154" y="-5" width="42" height="42"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Ojc-LF-5o6" firstAttribute="leading" secondItem="44n-HH-o8n" secondAttribute="trailing" constant="24.5" id="Bb8-bP-kRr"/>
+                                            <constraint firstItem="44n-HH-o8n" firstAttribute="top" secondItem="6B0-oi-i1f" secondAttribute="top" id="PcK-00-Nu2"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ojc-LF-5o6" secondAttribute="bottom" constant="5" id="eDh-tv-wqi"/>
+                                            <constraint firstAttribute="height" constant="42" id="kKM-hd-1w3"/>
+                                            <constraint firstItem="44n-HH-o8n" firstAttribute="leading" secondItem="6B0-oi-i1f" secondAttribute="leading" id="n4m-fM-ddx"/>
+                                            <constraint firstItem="Ojc-LF-5o6" firstAttribute="top" secondItem="6B0-oi-i1f" secondAttribute="top" constant="-5" id="nag-cv-a8g"/>
+                                            <constraint firstAttribute="bottom" secondItem="44n-HH-o8n" secondAttribute="bottom" constant="9" id="wt2-F7-iT4"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ojc-LF-5o6" secondAttribute="trailing" constant="54" id="zDB-O5-Tn8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qth-se-8aT" userLabel="Cards">
                                 <rect key="frame" x="20" y="386" width="374" height="289"/>
                                 <subviews>
@@ -103,68 +154,56 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Uu-GK-f7V">
-                                <rect key="frame" x="82" y="165" width="250" height="92"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ivt-Pt-Cgf" userLabel="Buttons">
+                                <rect key="frame" x="76" y="291" width="263" height="44"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNr-uK-Eok">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="42"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fba-iU-COr" userLabel="Timer label">
-                                                <rect key="frame" x="149" y="9.5" width="42" height="32.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="EDF-FN-xmX"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vX-uZ-bNL">
-                                                <rect key="frame" x="60" y="0.0" width="70" height="42"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvw-w2-piQ" userLabel="Start button">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="44"/>
                                         <constraints>
-                                            <constraint firstItem="Fba-iU-COr" firstAttribute="top" secondItem="aNr-uK-Eok" secondAttribute="top" constant="9.5" id="K5Q-e9-Z5i"/>
-                                            <constraint firstItem="Fba-iU-COr" firstAttribute="leading" secondItem="8vX-uZ-bNL" secondAttribute="trailing" constant="19" id="Na8-L0-29Q"/>
-                                            <constraint firstItem="8vX-uZ-bNL" firstAttribute="top" secondItem="aNr-uK-Eok" secondAttribute="top" id="Ot3-V0-EuH"/>
-                                            <constraint firstAttribute="bottom" secondItem="Fba-iU-COr" secondAttribute="bottom" id="YNZ-Hb-2Ad"/>
-                                            <constraint firstAttribute="height" constant="42" id="cSU-ch-Izx"/>
-                                            <constraint firstAttribute="bottom" secondItem="8vX-uZ-bNL" secondAttribute="bottom" id="jgz-WU-kru"/>
-                                            <constraint firstAttribute="trailing" secondItem="Fba-iU-COr" secondAttribute="trailing" constant="59" id="lYz-MS-YNo"/>
+                                            <constraint firstAttribute="width" constant="85" id="ILC-Xp-DB9"/>
+                                            <constraint firstAttribute="height" constant="44" id="qV1-VH-U7v"/>
                                         </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6B0-oi-i1f">
-                                        <rect key="frame" x="0.0" y="50" width="250" height="42"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Game No.:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44n-HH-o8n">
-                                                <rect key="frame" x="0.0" y="0.0" width="129.5" height="33"/>
-                                                <color key="tintColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojc-LF-5o6" userLabel="Game number label">
-                                                <rect key="frame" x="154" y="-5" width="42" height="42"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Start">
+                                            <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="StartGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WpL-ri-Y4k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdt-xi-6t7" userLabel="Pause button">
+                                        <rect key="frame" x="99" y="0.0" width="65" height="44"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
                                         <constraints>
-                                            <constraint firstItem="Ojc-LF-5o6" firstAttribute="leading" secondItem="44n-HH-o8n" secondAttribute="trailing" constant="24.5" id="Bb8-bP-kRr"/>
-                                            <constraint firstItem="44n-HH-o8n" firstAttribute="top" secondItem="6B0-oi-i1f" secondAttribute="top" id="PcK-00-Nu2"/>
-                                            <constraint firstAttribute="bottom" secondItem="Ojc-LF-5o6" secondAttribute="bottom" constant="5" id="eDh-tv-wqi"/>
-                                            <constraint firstAttribute="height" constant="42" id="kKM-hd-1w3"/>
-                                            <constraint firstItem="44n-HH-o8n" firstAttribute="leading" secondItem="6B0-oi-i1f" secondAttribute="leading" id="n4m-fM-ddx"/>
-                                            <constraint firstItem="Ojc-LF-5o6" firstAttribute="top" secondItem="6B0-oi-i1f" secondAttribute="top" constant="-5" id="nag-cv-a8g"/>
-                                            <constraint firstAttribute="bottom" secondItem="44n-HH-o8n" secondAttribute="bottom" constant="9" id="wt2-F7-iT4"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ojc-LF-5o6" secondAttribute="trailing" constant="54" id="zDB-O5-Tn8"/>
+                                            <constraint firstAttribute="height" constant="44" id="1ty-Hz-RfE"/>
+                                            <constraint firstAttribute="width" constant="65" id="tpx-Cd-CFZ"/>
                                         </constraints>
-                                    </view>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="pause.fill" catalog="system">
+                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJ3-Zd-1bv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTU-MR-pkT" userLabel="Reset button">
+                                        <rect key="frame" x="178" y="0.0" width="85" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="IW8-A7-5TI"/>
+                                            <constraint firstAttribute="width" constant="85" id="NMw-7j-Fwb"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Reset">
+                                            <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="ResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TY4-GH-EVY"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -174,33 +213,36 @@
                             <constraint firstItem="L9R-ai-d7C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6a6-pE-KAA"/>
                             <constraint firstItem="3jw-Be-ddi" firstAttribute="top" secondItem="Qth-se-8aT" secondAttribute="bottom" constant="32" id="8Bs-6C-dbJ"/>
                             <constraint firstItem="VuE-OC-ncL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ejk-Fy-aRv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ivt-Pt-Cgf" secondAttribute="trailing" constant="75" id="Fj7-iE-8IA"/>
                             <constraint firstItem="L9R-ai-d7C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G6m-xA-IXc"/>
                             <constraint firstItem="L9R-ai-d7C" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MA1-FA-8b5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3jw-Be-ddi" secondAttribute="bottom" constant="58.5" id="Ms4-io-3aU"/>
                             <constraint firstItem="3jw-Be-ddi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="O9l-h5-c3q"/>
                             <constraint firstAttribute="trailing" secondItem="L9R-ai-d7C" secondAttribute="trailing" id="OQd-XR-lJx"/>
-                            <constraint firstItem="Fvw-w2-piQ" firstAttribute="top" secondItem="2Uu-GK-f7V" secondAttribute="bottom" constant="42" id="OVf-7g-O4S"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VuE-OC-ncL" secondAttribute="trailing" constant="20" id="Q88-Yi-EBl"/>
                             <constraint firstAttribute="bottom" secondItem="L9R-ai-d7C" secondAttribute="bottom" id="QFF-Hl-LVD"/>
+                            <constraint firstItem="ivt-Pt-Cgf" firstAttribute="top" secondItem="2Uu-GK-f7V" secondAttribute="bottom" constant="34" id="QwI-TW-F5r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3jw-Be-ddi" secondAttribute="trailing" constant="45" id="S7q-hP-YUR"/>
                             <constraint firstItem="2Uu-GK-f7V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="V4D-xK-LUH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Uu-GK-f7V" secondAttribute="trailing" constant="82" id="V7k-Au-Tgu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fvw-w2-piQ" secondAttribute="trailing" constant="82" id="Y5J-is-8xS"/>
                             <constraint firstItem="Qth-se-8aT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eos-3v-iKM"/>
-                            <constraint firstItem="Qth-se-8aT" firstAttribute="top" secondItem="Fvw-w2-piQ" secondAttribute="bottom" constant="43" id="iGR-ud-WeK"/>
+                            <constraint firstItem="Qth-se-8aT" firstAttribute="top" secondItem="ivt-Pt-Cgf" secondAttribute="bottom" constant="51" id="hSp-MC-PEu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qth-se-8aT" secondAttribute="trailing" constant="20" id="lRv-YA-aCQ"/>
-                            <constraint firstItem="Fvw-w2-piQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="82" id="mF0-y6-xka"/>
                             <constraint firstItem="2Uu-GK-f7V" firstAttribute="top" secondItem="VuE-OC-ncL" secondAttribute="bottom" constant="35" id="oeS-h1-ReU"/>
                             <constraint firstItem="L9R-ai-d7C" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q69-l0-boM"/>
+                            <constraint firstItem="ivt-Pt-Cgf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="xOb-w5-kT9"/>
                             <constraint firstItem="VuE-OC-ncL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zIL-RZ-pMU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="gameNumberLabel" destination="Ojc-LF-5o6" id="WNe-Eg-FkQ"/>
+                        <outlet property="pauseButtonOutlet" destination="Gdt-xi-6t7" id="mbL-42-dnA"/>
                         <outlet property="player1ImageView" destination="5d7-8H-JwO" id="mgI-5x-MbO"/>
                         <outlet property="player1ScoreLabel" destination="AeA-Xn-Z1F" id="T6H-1r-agj"/>
                         <outlet property="player2ImageView" destination="8uA-wl-Ynj" id="YRi-wZ-YnG"/>
                         <outlet property="player2ScoreLabel" destination="0VH-GF-zoA" id="giF-rW-3M2"/>
+                        <outlet property="resetButtonOutlet" destination="vTU-MR-pkT" id="veB-ge-RMk"/>
+                        <outlet property="startButtonOutlet" destination="Fvw-w2-piQ" id="0WY-eg-IzP"/>
                         <outlet property="timerLabel" destination="Fba-iU-COr" id="Qh3-FN-Ny8"/>
                     </connections>
                 </viewController>
@@ -212,6 +254,7 @@
     <resources>
         <image name="back-green" width="612" height="433"/>
         <image name="card back purple" width="686" height="976"/>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
