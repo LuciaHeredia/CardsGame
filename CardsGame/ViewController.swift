@@ -134,17 +134,31 @@ class ViewController: UIViewController {
         else{
             gameNumber = 0
             startButtonClicked -= 1
-            print("Game Over")//game over
             
+            var winner: String = ""
             // compare scores
             if player1Score > player2Score {
-                print("Player 1 WON!")
+                winner = "Player 1 WON!"
             } else if player1Score < player2Score {
-                print("Player 2 WON!")
+                winner = "Player 2 WON!"
             } else {
-                print("It's a TIE!")
+                winner = "It's a TIE!"
             }
-            // popup dialog with the winner *****************************
+
+            // create the alert
+            let alert = UIAlertController(title: winner, message: nil, preferredStyle: UIAlertController.Style.alert)
+
+            // add the actions (buttons)
+            alert.addAction(UIAlertAction(title: "Play again?", style: UIAlertAction.Style.default, handler: { action in
+                self.ResetButton(UIButton())
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Exit", style: UIAlertAction.Style.default, handler: { action in
+                exit(0)
+            }))
+
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -164,11 +178,48 @@ class ViewController: UIViewController {
         // set left image
         player2ImageView.image = UIImage(named: cardNames[player2Card])
         
+        // new card number
+        let newPlayer1Card: Int = newCardNumber(playerCard: player1Card)
+        let newPlayer2Card: Int = newCardNumber(playerCard: player2Card)
+        
         // compare card numbers
-        if player1Card > player2Card {
+        if newPlayer1Card > newPlayer2Card {
             player1Score += 1
-        } else { // player1Card < player2Card
+        } else if newPlayer1Card < newPlayer2Card {
             player2Score += 1
+        }
+    }
+    
+    func newCardNumber(playerCard: Int) -> Int {
+        switch playerCard{
+        case 0...3:
+            return 1
+        case 4...7:
+            return 2
+        case 8...11:
+            return 3
+        case 12...15:
+            return 4
+        case 16...19:
+            return 5
+        case 20...23:
+            return 6
+        case 24...27:
+            return 7
+        case 28...31:
+            return 8
+        case 32...35:
+            return 9
+        case 36...39:
+            return 10
+        case 40...43:
+            return 11
+        case 44...47:
+            return 12
+        case 48...51:
+            return 13
+        default:
+            return 0
         }
     }
 
